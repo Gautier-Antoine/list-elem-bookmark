@@ -1,0 +1,23 @@
+.block {
+    background-color: blue;
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .elem {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &.active {
+            flex-direction: row;
+            .elem {
+                flex-direction: column;
+            }
+        }
+    }
+}
