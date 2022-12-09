@@ -1,23 +1,133 @@
-.block {
-    background-color: blue;
+html {
+    overflow-x: hidden;
+}
+.block-best-betting-site {
+    background-color: #E5E5E5;
+    padding: 2em;
+    a {
+        color: #3F48FC;
+    }
+    h2 {
+        margin: auto;
+    }
     .header {
         display: flex;
+        align-items: center;
         justify-content: space-between;
+        gap: 20px;
+        color: #000;
+        a {
+            color: #484848;
+        }
+        h2 {
+            // ! See small underline
+            text-align: center;
+        }
+        .view {
+            display: none;
+        }
     }
     .main {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-between;  
+        padding: 2em 0;
+        gap: 20px;  
+        padding: 0px;
+        transition: all .3s ease-in-out;
         .elem {
+            padding: 0;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-        }
-        &.active {
-            flex-direction: row;
-            .elem {
-                flex-direction: column;
+            background: #FFFFFF;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            transition: 0.3s ease-out;
+            &:hover {
+                scale: 1.10;
+            }
+            .part-1,
+            .part-2 {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                justify-content: space-between;
+                height: 100%;
+                img {
+                    &.rating {
+                        display: none;
+                    }
+                    &.logo {
+                        max-width: 100px;
+                        max-height: 100px;
+                        height: auto;
+                    }
+                }
+                a.btn {
+                    background-color: #F44337;
+                    color: #FFF;
+                    padding: 16px;
+                    border-radius: 0 4px 4px 0;
+                    text-decoration: none;
+                    span {
+                        display: none;
+                    }
+                    &::after {
+                        content: ">";
+                    }
+                }
             }
         }
     }
+    .footer {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 781px) {
+    .header {
+        .view {
+            display: block;
+        }
+    }
+    .main {
+        padding: 40px;
+        .elem {
+            padding: 0 1em;
+            .part-1,
+            .part-2 {
+                img {
+                    &.rating {
+                        display: block;
+                        max-width: 100px;
+                        height: auto;
+                    }
+                }
+                a.btn {
+                    border-radius: 4px;
+                    padding: 9px 44px;
+                    span {
+                        display: block;
+                    }
+                    &::after {
+                        position: absolute;
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+        }
+        &.card {
+            flex-direction: row;
+            .elem {
+                flex-direction: column;
+                .part-1,
+                .part-2 {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    
 }

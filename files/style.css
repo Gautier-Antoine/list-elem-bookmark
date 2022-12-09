@@ -1,23 +1,132 @@
-.block {
-  background-color: blue;
+html {
+  overflow-x: hidden;
 }
-.block .header {
+
+.block-best-betting-site {
+  background-color: #E5E5E5;
+  padding: 2em;
+}
+.block-best-betting-site a {
+  color: #3F48FC;
+}
+.block-best-betting-site h2 {
+  margin: auto;
+}
+.block-best-betting-site .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 20px;
+  color: #000;
 }
-.block .main {
+.block-best-betting-site .header a {
+  color: #484848;
+}
+.block-best-betting-site .header h2 {
+  text-align: center;
+}
+.block-best-betting-site .header .view {
+  display: none;
+}
+.block-best-betting-site .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 2em 0;
+  gap: 20px;
+  padding: 0px;
+  transition: all 0.3s ease-in-out;
 }
-.block .main .elem {
+.block-best-betting-site .main .elem {
+  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: 0.3s ease-out;
 }
-.block .main.active {
-  flex-direction: row;
+.block-best-betting-site .main .elem:hover {
+  scale: 1.1;
 }
-.block .main.active .elem {
-  flex-direction: column;
+.block-best-betting-site .main .elem .part-1,
+.block-best-betting-site .main .elem .part-2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  height: 100%;
+}
+.block-best-betting-site .main .elem .part-1 img.rating,
+.block-best-betting-site .main .elem .part-2 img.rating {
+  display: none;
+}
+.block-best-betting-site .main .elem .part-1 img.logo,
+.block-best-betting-site .main .elem .part-2 img.logo {
+  max-width: 100px;
+  max-height: 100px;
+  height: auto;
+}
+.block-best-betting-site .main .elem .part-1 a.btn,
+.block-best-betting-site .main .elem .part-2 a.btn {
+  background-color: #F44337;
+  color: #FFF;
+  padding: 16px;
+  border-radius: 0 4px 4px 0;
+  text-decoration: none;
+}
+.block-best-betting-site .main .elem .part-1 a.btn span,
+.block-best-betting-site .main .elem .part-2 a.btn span {
+  display: none;
+}
+.block-best-betting-site .main .elem .part-1 a.btn::after,
+.block-best-betting-site .main .elem .part-2 a.btn::after {
+  content: ">";
+}
+.block-best-betting-site .footer {
+  text-align: center;
+}
+
+@media screen and (min-width: 781px) {
+  .header .view {
+    display: block;
+  }
+
+  .main {
+    padding: 40px;
+  }
+  .main .elem {
+    padding: 0 1em;
+  }
+  .main .elem .part-1 img.rating,
+.main .elem .part-2 img.rating {
+    display: block;
+    max-width: 100px;
+    height: auto;
+  }
+  .main .elem .part-1 a.btn,
+.main .elem .part-2 a.btn {
+    border-radius: 4px;
+    padding: 9px 44px;
+  }
+  .main .elem .part-1 a.btn span,
+.main .elem .part-2 a.btn span {
+    display: block;
+  }
+  .main .elem .part-1 a.btn::after,
+.main .elem .part-2 a.btn::after {
+    position: absolute;
+    margin-left: 20px;
+  }
+  .main.card {
+    flex-direction: row;
+  }
+  .main.card .elem {
+    flex-direction: column;
+  }
+  .main.card .elem .part-1,
+.main.card .elem .part-2 {
+    flex-direction: column;
+  }
 }
