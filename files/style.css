@@ -1,10 +1,22 @@
+@import url("https://fonts.cdnfonts.com/css/source-sans-pro");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,700;1,700&display=swap");
 html {
   overflow-x: hidden;
 }
 
 .block-best-betting-site {
-  background-color: #E5E5E5;
-  padding: 2em;
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  max-width: 100% !important;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: center;
+  background-color: #FFFFFF;
 }
 .block-best-betting-site a {
   color: #3F48FC;
@@ -12,55 +24,96 @@ html {
 .block-best-betting-site h2 {
   margin: auto;
 }
-.block-best-betting-site .header {
+.block-best-betting-site .flex {
   display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 781px) {
+  .block-best-betting-site .hide-mobile {
+    display: none;
+  }
+}
+.block-best-betting-site .header {
   justify-content: space-between;
   gap: 20px;
-  color: #000;
+  color: #000000;
 }
 .block-best-betting-site .header a {
   color: #484848;
 }
-.block-best-betting-site .header h2 {
+.block-best-betting-site .header .title h1 {
+  font-family: "Titillium Web", Helvetica;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: 0em;
+  text-align: left;
   text-align: center;
 }
-.block-best-betting-site .header .view {
-  display: none;
+.block-best-betting-site hr {
+  width: 72px;
+  border-bottom: 4px solid #F44337;
 }
 .block-best-betting-site .main {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2em 0;
   gap: 20px;
-  padding: 0px;
   transition: all 0.3s ease-in-out;
+  padding: 40px;
+}
+@media screen and (max-width: 781px) {
+  .block-best-betting-site .main {
+    padding: 0px;
+  }
 }
 .block-best-betting-site .main .elem {
-  padding: 0;
-  display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   background: #FFFFFF;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   transition: 0.3s ease-out;
+  padding: 0 1em;
+  height: 60px;
+}
+@media screen and (max-width: 781px) {
+  .block-best-betting-site .main .elem {
+    padding-right: 0;
+    height: 56px;
+  }
 }
 .block-best-betting-site .main .elem:hover {
   scale: 1.1;
 }
+.block-best-betting-site .main .elem .part-1 h2 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.9200000167px;
+  text-align: left;
+}
+.block-best-betting-site .main .elem .part-1 a {
+  color: #3A3A3A;
+}
+.block-best-betting-site .main .elem .part-1 a.review::after {
+  content: "Read review";
+}
+@media screen and (max-width: 781px) {
+  .block-best-betting-site .main .elem .part-1 a.review::after {
+    content: "Review";
+  }
+}
+.block-best-betting-site .main .elem .part-2 {
+  color: #3F48FC;
+}
 .block-best-betting-site .main .elem .part-1,
 .block-best-betting-site .main .elem .part-2 {
-  display: flex;
-  align-items: center;
   gap: 20px;
   justify-content: space-between;
   height: 100%;
-}
-.block-best-betting-site .main .elem .part-1 img.rating,
-.block-best-betting-site .main .elem .part-2 img.rating {
-  display: none;
 }
 .block-best-betting-site .main .elem .part-1 img.logo,
 .block-best-betting-site .main .elem .part-2 img.logo {
@@ -68,65 +121,48 @@ html {
   max-height: 100px;
   height: auto;
 }
+.block-best-betting-site .main .elem .part-1 .rating,
+.block-best-betting-site .main .elem .part-2 .rating {
+  gap: 0px;
+}
 .block-best-betting-site .main .elem .part-1 a.btn,
 .block-best-betting-site .main .elem .part-2 a.btn {
   background-color: #F44337;
-  color: #FFF;
-  padding: 16px;
-  border-radius: 0 4px 4px 0;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 9px 44px;
   text-decoration: none;
 }
-.block-best-betting-site .main .elem .part-1 a.btn span,
-.block-best-betting-site .main .elem .part-2 a.btn span {
-  display: none;
+@media screen and (max-width: 781px) {
+  .block-best-betting-site .main .elem .part-1 a.btn,
+.block-best-betting-site .main .elem .part-2 a.btn {
+    padding: 18.5px;
+    border-radius: 0 4px 4px 0;
+  }
 }
 .block-best-betting-site .main .elem .part-1 a.btn::after,
 .block-best-betting-site .main .elem .part-2 a.btn::after {
-  content: ">";
+  content: url("../img/Chevron_Right.png");
+}
+.block-best-betting-site .main.card {
+  flex-direction: row;
+}
+.block-best-betting-site .main.card .elem {
+  flex-direction: column;
+}
+.block-best-betting-site .main.card .elem .part-1,
+.block-best-betting-site .main.card .elem .part-2 {
+  flex-direction: column;
 }
 .block-best-betting-site .footer {
   text-align: center;
+  padding: 30px 0;
 }
-
-@media screen and (min-width: 781px) {
-  .header .view {
-    display: block;
-  }
-
-  .main {
-    padding: 40px;
-  }
-  .main .elem {
-    padding: 0 1em;
-  }
-  .main .elem .part-1 img.rating,
-.main .elem .part-2 img.rating {
-    display: block;
-    max-width: 100px;
-    height: auto;
-  }
-  .main .elem .part-1 a.btn,
-.main .elem .part-2 a.btn {
-    border-radius: 4px;
-    padding: 9px 44px;
-  }
-  .main .elem .part-1 a.btn span,
-.main .elem .part-2 a.btn span {
-    display: block;
-  }
-  .main .elem .part-1 a.btn::after,
-.main .elem .part-2 a.btn::after {
-    position: absolute;
-    margin-left: 20px;
-  }
-  .main.card {
-    flex-direction: row;
-  }
-  .main.card .elem {
-    flex-direction: column;
-  }
-  .main.card .elem .part-1,
-.main.card .elem .part-2 {
-    flex-direction: column;
+.block-best-betting-site .footer a {
+  color: #2738F1;
+}
+@media screen and (min-width: 480px) {
+  .block-best-betting-site .footer a {
+    text-decoration: none;
   }
 }
